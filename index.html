@@ -32,7 +32,7 @@
       <section id="controls">
         <button @click='attackPlayer'>ATTACK</button>
         <button :disabled='round % 3 !== 0' @click='specialAttack'>SPECIAL ATTACK</button>
-        <button>HEAL</button>
+        <button :disabled='round % 3 !== 0' @click='healPlayer'>HEAL</button>
         <button>SURRENDER</button>
       </section>
       <section id="log" class="container">
