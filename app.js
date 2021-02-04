@@ -59,6 +59,9 @@ const app = Vue.createApp({
             this.round ++;
             const healValue = randomValue(1, 6);
             this.playerHealth += healValue;
+        },
+        surrender(){
+            this.winner = 'Lost'
         }
     }
 });
