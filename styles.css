@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -85,10 +85,8 @@ button:active {
 }
 
 button:disabled {
-  background-color: #ccc;
-  border-color: #ccc;
+  background-color: #88005b;
   box-shadow: none;
-  color: #3f3f3f;
   cursor: not-allowed;
 }
 
