@@ -8,7 +8,8 @@ const app = Vue.createApp({
             monsterHealth : 100,
             playerHealth : 100,
             round: 0,
-            winner: null
+            winner: null,
+            gameRunning: true
         }
     },
     computed: {
@@ -26,15 +27,19 @@ const app = Vue.createApp({
         playerHealth(value){
             if (value < 0 && this.monsterHealth < 0){
                 this.winner = 'Draw'
+                this.gameRunning = false
             }else if (value < 0) {
                 this.winner = 'Lost'
+                this.gameRunning = false
             }
         },
         monsterHealth(value){
             if (value < 0 && this.playerHealth < 0){
                 this.winner = 'Draw'
+                this.gameRunning = false
             }else if (value < 0) {
                 this.winner = 'Won'
+                this.gameRunning = false
             } 
         }
     },
@@ -62,6 +67,13 @@ const app = Vue.createApp({
         },
         surrender(){
             this.winner = 'Lost'
+        },
+        restart(){
+            this.monsterHealth = 100,
+            this.playerHealth = 100,
+            this.round = 0,
+            this.winner = null,
+            this.gameRunning = true
         }
     }
 });
