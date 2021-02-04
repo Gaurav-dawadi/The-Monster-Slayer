@@ -46,9 +46,11 @@
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
-        <!-- <ul v-if='attackPlayer'>
-          <li>Monster hit player by </li>
-        </ul> -->
+        <div v-if='attackPlayer || specialAttack || healPlayer'>
+          <ul v-for='x in logMessage'>
+            <li>{{x}}</li>
+          </ul>
+        </div>
       </section>
     </div>
   </body>
