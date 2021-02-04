@@ -16,6 +16,9 @@ const app = Vue.createApp({
         },
         playerHealthBar(){
             return {width: this.playerHealth + '%' }
+        },
+        buttonDisable(){
+            return this.round % 3 !== 0
         }
     },
     methods: {
